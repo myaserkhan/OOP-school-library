@@ -1,4 +1,4 @@
-require '../Decorator/nameable.rb'
+require '../Decorator/nameable'
 
 class Person < Nameable
   attr_reader :id
