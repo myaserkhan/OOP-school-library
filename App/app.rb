@@ -102,6 +102,10 @@ class App
   end
 
   def list_all_rentals
+    puts 'List of People:'
+    @people_list.each do |person|
+      puts "ID: #{person.id}, Name: #{person.name}"
+    end
     print 'ID of person: '
     id = gets.chomp.to_i
 
@@ -110,7 +114,7 @@ class App
       puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
     end
     @parent.show_menu
-  end
+end
 
   def exit
     puts 'Thank you for using the app, see you later!'
