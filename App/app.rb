@@ -114,7 +114,7 @@ class App
       puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
     end
     @parent.show_menu
-end
+  end
 
   def exit
     puts 'Thank you for using the app, see you later!'
