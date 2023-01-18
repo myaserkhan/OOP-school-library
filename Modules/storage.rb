@@ -1,13 +1,17 @@
 class Storage
-  @file_extention = 'json'
+  @file_extension = 'json'
   @base_url = './db/'
 
-  def self.save_date(class_name, object)
-    File.write("#{@base_url}#{class_name}.#{@file_extention}", JSON.generate(object))
+  def self.save_data(class_name, object)
+    # Create the directory if it doesn't exist
+    Dir.mkdir(@base_url) unless Dir.exist?(@base_url)
+
+    file_path = "#{@base_url}#{class_name}.#{@file_extension}"
+    File.write(file_path, JSON.generate(object))
   end
 
   def self.load_data(class_name)
-    file_path = "#{@base_url}#{class_name}.#{@file_extention}"
+    file_path = "#{@base_url}#{class_name}.#{@file_extension}"
 
     return [] unless File.exist?(file_path)
 
