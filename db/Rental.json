@@ -1,0 +1,1 @@
+[{"json_class":"Rental","date":"","book":{"json_class":"Book","title":"Atomic Habits","author":"James Clear"},"person":{"json_class":"Student","age":25,"classroom":0,"name":"Yasir","parent_permission":true}}]
