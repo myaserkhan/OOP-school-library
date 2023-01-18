@@ -3,8 +3,8 @@ class Storage
   @base_url = './db/'
 
   def self.save_data(class_name, object)
-    # Create the directory if it doesn't exist
-    Dir.mkdir(@base_url) unless Dir.exist?(@base_url)
+    # Create the directory 
+    Dir.mkdir(@base_url) 
 
     file_path = "#{@base_url}#{class_name}.#{@file_extension}"
     File.write(file_path, JSON.generate(object))
