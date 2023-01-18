@@ -2,7 +2,7 @@ class Storage
   @file_extension = 'json'
   @base_url = './db/'
 
-  def self.save_data(class_name, object)
+  def self.save_date(class_name, object)
     # Create the directory
     Dir.mkdir(@base_url)
 
