@@ -11,9 +11,9 @@ class RentalOptions
 
   def create_rental
     puts 'Select a book from the following list by number'
-    @book_options.books_list.each_with_index { |book, index|
+    @book_options.books_list.each_with_index do |book, index|
       puts "#{index}) Title: '#{book.title}', Author: #{book.author}"
-    }
+    end
     book_num = gets.chomp.to_i
     puts
     puts 'Select a person from the following list by number (not id)'
