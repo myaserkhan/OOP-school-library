@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Nameable do
   before :each do
-    @nameable = Nameable.new()
+    @nameable = Nameable.new
   end
 
   context 'When testing a Nameable class' do
@@ -13,7 +13,7 @@ describe Nameable do
 
   context 'When using correct_name method' do
     it 'should raise an error' do
-      expect { @nameable.correct_name }.to raise_error ('NotImplementedError')
+      expect { @nameable.correct_name }.to raise_error('NotImplementedError')
     end
   end
 end

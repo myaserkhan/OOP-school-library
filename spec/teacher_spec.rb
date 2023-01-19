@@ -32,7 +32,8 @@ describe Teacher do
   context '>Create an object from JSON' do
     it 'should check json string' do
       @teacher = JSON.parse(
-        '{"json_class":"Teacher","age":13,"specialization":"Solid State","name":"Asghari","parent_permission":false}', create_additions: true
+        '{"json_class":"Teacher","age":13,"specialization":"Solid State","name":"Asghari","parent_permission":false}',
+        create_additions: true
       )
       expect(@teacher).to be_an_instance_of Teacher
     end
