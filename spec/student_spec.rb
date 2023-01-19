@@ -34,7 +34,7 @@ describe Student do
       json_obj = @student.to_json.to_s
       # rubocop:disable Layout/LineLength
       json_str = '{"json_class":"Student","age":13,"classroom":"Masters","name":"KanzaKanzaKanza","parent_permission":true}'
-      # rubocop:disable Layout/LineLength
+      # rubocop:enable Layout/LineLength
       expect(json_obj).to eq json_str
     end
   end
